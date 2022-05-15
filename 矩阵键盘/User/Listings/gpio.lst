@@ -1,0 +1,120 @@
+C51 COMPILER V9.56.0.0   GPIO                                                              05/15/2022 22:14:11 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE GPIO
+OBJECT MODULE PLACED IN .\Objects\gpio.obj
+COMPILER INVOKED BY: D:\Keil_C51\C51\BIN\C51.EXE ..\Sys\gpio.c OPTIMIZE(8,SPEED) BROWSE INCDIR(..\Driver;..\Sys) DEBUG O
+                    -BJECTEXTEND PRINT(.\Listings\gpio.lst) OBJECT(.\Objects\gpio.obj)
+
+line level    source
+
+   1          #include "gpio.h"
+   2          
+   3          unsigned char GPIO_Config(unsigned char GPIO,GPIO_InitDef *GPIOx)
+   4          {
+   5   1              if(GPIO >GPIO_P7) return 1;
+   6   1              if(GPIOx->Mode > GPIO_OUT_PP)   return 2;
+   7   1              
+   8   1              if(GPIO == GPIO_P0) 
+   9   1              {
+  10   2                      if(GPIOx->Mode == GPIO_PullUp ) P0M1 &= (~GPIOx->Pin),  P0M0 &= (~GPIOx->Pin);
+  11   2                      if(GPIOx->Mode == GPIO_HighZ )  P0M1 |= GPIOx->Pin,         P0M0 &= (~GPIOx->Pin);
+  12   2                      if(GPIOx->Mode == GPIO_OUT_OD ) P0M1 |= GPIOx->Pin,         P0M0 |= GPIOx->Pin;
+  13   2                      if(GPIOx->Mode == GPIO_OUT_PP ) P0M1 &= (~GPIOx->Pin),  P0M0 |= GPIOx->Pin;
+  14   2              }
+  15   1              if(GPIO == GPIO_P1) 
+  16   1              {
+  17   2                      if(GPIOx->Mode == GPIO_PullUp ) P1M1 &= (~GPIOx->Pin),  P1M0 &= (~GPIOx->Pin);
+  18   2                      if(GPIOx->Mode == GPIO_HighZ )  P1M1 |= GPIOx->Pin,         P1M0 &= (~GPIOx->Pin);
+  19   2                      if(GPIOx->Mode == GPIO_OUT_OD ) P1M1 |= GPIOx->Pin,         P1M0 |= GPIOx->Pin;
+  20   2                      if(GPIOx->Mode == GPIO_OUT_PP ) P1M1 &= (~GPIOx->Pin),  P1M0 |= GPIOx->Pin;
+  21   2              }
+  22   1              if(GPIO == GPIO_P2) 
+  23   1              {
+  24   2                      if(GPIOx->Mode == GPIO_PullUp ) P2M1 &= (~GPIOx->Pin),  P2M0 &= (~GPIOx->Pin);
+  25   2                      if(GPIOx->Mode == GPIO_HighZ )  P2M1 |= GPIOx->Pin,         P2M0 &= (~GPIOx->Pin);
+  26   2                      if(GPIOx->Mode == GPIO_OUT_OD ) P2M1 |= GPIOx->Pin,         P2M0 |= GPIOx->Pin;
+  27   2                      if(GPIOx->Mode == GPIO_OUT_PP ) P2M1 &= (~GPIOx->Pin),  P2M0 |= GPIOx->Pin;
+  28   2              }
+  29   1              if(GPIO == GPIO_P3) 
+  30   1              {
+  31   2                      if(GPIOx->Mode == GPIO_PullUp ) P3M1 &= (~GPIOx->Pin),  P3M0 &= (~GPIOx->Pin);
+  32   2                      if(GPIOx->Mode == GPIO_HighZ )  P3M1 |= GPIOx->Pin,         P3M0 &= (~GPIOx->Pin);
+  33   2                      if(GPIOx->Mode == GPIO_OUT_OD ) P3M1 |= GPIOx->Pin,         P3M0 |= GPIOx->Pin;
+  34   2                      if(GPIOx->Mode == GPIO_OUT_PP ) P3M1 &= (~GPIOx->Pin),  P3M0 |= GPIOx->Pin;
+  35   2              }
+  36   1              if(GPIO == GPIO_P4) 
+  37   1              {
+  38   2                      if(GPIOx->Mode == GPIO_PullUp ) P4M1 &= (~GPIOx->Pin),  P4M0 &= (~GPIOx->Pin);
+  39   2                      if(GPIOx->Mode == GPIO_HighZ )  P4M1 |= GPIOx->Pin,         P4M0 &= (~GPIOx->Pin);
+  40   2                      if(GPIOx->Mode == GPIO_OUT_OD ) P4M1 |= GPIOx->Pin,         P4M0 |= GPIOx->Pin;
+  41   2                      if(GPIOx->Mode == GPIO_OUT_PP ) P4M1 &= (~GPIOx->Pin),  P4M0 |= GPIOx->Pin;
+  42   2              }
+  43   1              if(GPIO == GPIO_P5) 
+  44   1              {
+  45   2                      if(GPIOx->Mode == GPIO_PullUp ) P5M1 &= (~GPIOx->Pin),  P5M0 &= (~GPIOx->Pin);
+  46   2                      if(GPIOx->Mode == GPIO_HighZ )  P5M1 |= GPIOx->Pin,         P5M0 &= (~GPIOx->Pin);
+  47   2                      if(GPIOx->Mode == GPIO_OUT_OD ) P5M1 |= GPIOx->Pin,         P5M0 |= GPIOx->Pin;
+  48   2                      if(GPIOx->Mode == GPIO_OUT_PP ) P5M1 &= (~GPIOx->Pin),  P5M0 |= GPIOx->Pin;
+  49   2              }
+  50   1              if(GPIO == GPIO_P6) 
+  51   1              {
+  52   2                      if(GPIOx->Mode == GPIO_PullUp ) P6M1 &= (~GPIOx->Pin),  P6M0 &= (~GPIOx->Pin);
+  53   2                      if(GPIOx->Mode == GPIO_HighZ )  P6M1 |= GPIOx->Pin,         P6M0 &= (~GPIOx->Pin);
+  54   2                      if(GPIOx->Mode == GPIO_OUT_OD ) P6M1 |= GPIOx->Pin,         P6M0 |= GPIOx->Pin;
+C51 COMPILER V9.56.0.0   GPIO                                                              05/15/2022 22:14:11 PAGE 2   
+
+  55   2                      if(GPIOx->Mode == GPIO_OUT_PP ) P6M1 &= (~GPIOx->Pin),  P6M0 |= GPIOx->Pin;
+  56   2              }
+  57   1              if(GPIO == GPIO_P7) 
+  58   1              {
+  59   2                      if(GPIOx->Mode == GPIO_PullUp ) P7M1 &= (~GPIOx->Pin),  P7M0 &= (~GPIOx->Pin);
+  60   2                      if(GPIOx->Mode == GPIO_HighZ )  P7M1 |= GPIOx->Pin,         P7M0 &= (~GPIOx->Pin);
+  61   2                      if(GPIOx->Mode == GPIO_OUT_OD ) P7M1 |= GPIOx->Pin,         P7M0 |= GPIOx->Pin;
+  62   2                      if(GPIOx->Mode == GPIO_OUT_PP ) P7M1 &= (~GPIOx->Pin),  P7M0 |= GPIOx->Pin;
+  63   2              }
+  64   1              return 0;
+  65   1      }
+  66          
+  67          void PWM_GPIO_Config(void)
+  68          {
+  69   1              GPIO_InitDef GPIO_InitStructure;
+  70   1              
+  71   1              GPIO_InitStructure.Mode = GPIO_OUT_PP;
+  72   1              GPIO_InitStructure.Pin = GPIO_Pin_6 | GPIO_Pin_7;
+  73   1              GPIO_Config(GPIO_P0,&GPIO_InitStructure);
+  74   1              
+  75   1              GPIO_InitStructure.Mode = GPIO_OUT_PP;
+  76   1              GPIO_InitStructure.Pin = 0;
+  77   1              GPIO_InitStructure.Pin = GPIO_Pin_3 | GPIO_Pin_4;
+  78   1              GPIO_Config(GPIO_P1,&GPIO_InitStructure);
+  79   1              
+  80   1              GPIO_InitStructure.Mode = GPIO_OUT_PP;
+  81   1              GPIO_InitStructure.Pin = 0;
+  82   1              GPIO_InitStructure.Pin = GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_7;
+  83   1              GPIO_Config(GPIO_P2,&GPIO_InitStructure);
+  84   1              
+  85   1              GPIO_InitStructure.Mode = GPIO_OUT_PP;
+  86   1              GPIO_InitStructure.Pin = 0;
+  87   1              GPIO_InitStructure.Pin = GPIO_Pin_7;
+  88   1              GPIO_Config(GPIO_P2,&GPIO_InitStructure);
+  89   1              
+  90   1              GPIO_InitStructure.Mode = GPIO_OUT_PP;
+  91   1              GPIO_InitStructure.Pin = 0;
+  92   1              GPIO_InitStructure.Pin = GPIO_Pin_2 | GPIO_Pin_4 | GPIO_Pin_5;
+  93   1              GPIO_Config(GPIO_P2,&GPIO_InitStructure);
+  94   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    669    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

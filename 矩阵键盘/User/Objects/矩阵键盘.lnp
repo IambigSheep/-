@@ -1,0 +1,6 @@
+".\Objects\main.obj",
+".\Objects\gpio.obj",
+".\Objects\seg.obj",
+".\Objects\key.obj" 
+TO ".\Objects\¾ØÕó¼üÅÌ" 
+PRINT(".\Listings\¾ØÕó¼üÅÌ.m51") RAMSIZE(256) 
